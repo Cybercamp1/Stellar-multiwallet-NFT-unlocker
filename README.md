@@ -8,7 +8,10 @@ A premium full-stack Web3 dApp built on **Stellar Soroban**, allowing users to c
 - **Dynamic Wallet Switching**: Switch between connected wallets instantly with updated access states.
 - **Soroban Smart Contract**: On-chain access control logic (`pay_and_unlock`, `check_access`).
 - **Real-Time Updates**: Live transaction feed with pending/success/failure states.
+- **NFT Resale Marketplace**: A fully functional "OpenSea-lite" system to list and buy NFTs on-chain.
+- **Top Collectors Leaderboard**: Real-time ranking of the most active collectors in the ecosystem.
 - **Performance Dashboard**: Real-time stats display for total value unlocked and active collectors.
+- **Demo Mode**: Built-in simulation mode for testing marketplace and unlock flows without real contract IDs.
 - **Premium Aesthetics**: High-fidelity dark mode UI with glassmorphism, animations, and custom generated NFT art.
 
 ## 🛠 Tech Stack
@@ -50,8 +53,10 @@ cargo test
 ## 📜 Smart Contract Logic
 
 The contract `NFTAccessControl` implements:
-- `pay_and_unlock(user, amount)`: Stores access status and emits events.
-- `check_access(user)`: Returns boolean access state.
+- `pay_and_unlock(user, token_id, amount)`: Stores access status and initial ownership.
+- `list_nft(seller, token_id, price)`: Lists an owned NFT for sale in the marketplace.
+- `buy_nft(buyer, token_id)`: Facilitates peer-to-peer NFT purchases and ownership transfer.
+- `check_access(user)`: Returns boolean access state for legacy content unlocking.
 
 ## 🚀 Setup & Installation
 
