@@ -3,12 +3,13 @@
 import Navbar from '@/components/Navbar';
 import NFTCard from '@/components/NFTCard';
 import ActivityFeed from '@/components/ActivityFeed';
+import Stats from '@/components/Stats';
 import { useNFTs } from '@/hooks/useNFTs';
 import { Shield, Sparkles, Activity as ActivityIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  const { nfts, activities, status, unlockNFT, view, setView } = useNFTs();
+  const { nfts, activities, unlockingId, unlockNFT, view, setView } = useNFTs();
 
   return (
     <main className="min-h-screen pt-28 pb-20 px-6 relative overflow-hidden">
@@ -56,7 +57,9 @@ export default function Home() {
             </div>
           </section>
 
-          {/* View Toggler */}
+          <Stats />
+
+          {/* View Toggler / MY NFTS */}
           <div className="flex items-center gap-4 p-1.5 bg-white/5 border border-white/10 rounded-2xl w-fit">
             <button
               onClick={() => setView('explore')}
@@ -97,7 +100,7 @@ export default function Home() {
                   <NFTCard 
                     nft={nft} 
                     onUnlock={unlockNFT} 
-                    isLoading={status === 'pending'} 
+                    isLoading={unlockingId === nft.id} 
                   />
                 </motion.div>
               ))
