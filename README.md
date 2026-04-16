@@ -2,6 +2,10 @@
 
 A premium full-stack Web3 dApp built on **Stellar Soroban**, allowing users to connect multiple wallets and pay XLM to unlock exclusive NFT content.
 
+**🔗 Live Demo:** [https://stellarcat-nft-marketplace.netlify.app](https://stellarcat-nft-marketplace.netlify.app)
+**🎥 Video Walkthrough:** *(Paste your video link here)*
+
+
 ## 🚀 Features
 
 - **Multi-Wallet Support**: Integrated with Stellar Wallets Kit (Freighter, Albedo).
