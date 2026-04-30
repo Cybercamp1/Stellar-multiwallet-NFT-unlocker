@@ -83,8 +83,10 @@ The contract `NFTAccessControl` implements:
    cd contracts
    soroban contract build
    soroban contract deploy --network testnet --source <YOUR_ACCOUNT> --wasm target/wasm32-unknown-unknown/release/nft_access_control.wasm
-   ```
-   *Note: Current contract ID is a placeholder in `src/utils/stellar.ts`.*
+   
+  CONTRACT_ID = 'CCGZ76DYYTMLJ6Q6256KIP4J2J5Q5R5T3F5C67635W5P6J2G76K6MKLG';
+  '''
+
 
 ## 📸 Screenshots
 
